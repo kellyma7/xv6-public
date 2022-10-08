@@ -34,7 +34,6 @@ int main() {
                 fstat(fd, &stats);
                 printf(1, "file size = %d\n", stats.size);
             }
-            cv_wait(&cv);
             unlock(&cv.lk);
             printf(1, "Child 2 Executing\n");
         } else {
